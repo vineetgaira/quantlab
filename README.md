@@ -51,10 +51,10 @@ The platform is designed to grow incrementally through well-defined phases, ensu
 │   │      Strategy Framework │ Performance Metrics │ Trade Log   │   │
 │   └───────────────┬─────────────────────────┬───────────────────┘   │
 │                   │                         │                       │
-│   ┌───────────────▼───────────┐  ┌──────────▼──────────────────┐   │
-│   │   Portfolio Optimization  │  │      Option Pricing         │   │
-│   │  Efficient Frontier │ MVP │  │  Black-Scholes │ Binomial   │   │
-│   └───────────────┬───────────┘  └──────────┬──────────────────┘   │
+│   ┌───────────────▼───────────┐  ┌──────────▼──────────────────┐    │
+│   │   Portfolio Optimization  │  │      Option Pricing         │    │
+│   │  Efficient Frontier │ MVP │  │  Black-Scholes │ Binomial   │    │
+│   └───────────────┬───────────┘  └──────────┬──────────────────┘    │
 │                   │                         │                       │
 │   ┌───────────────▼─────────────────────────▼───────────────────┐   │
 │   │                    Risk Analytics                           │   │
@@ -73,7 +73,7 @@ The platform is designed to grow incrementally through well-defined phases, ensu
 │                                │                                    │
 │   ┌────────────────────────────▼────────────────────────────────┐   │
 │   │                  Statistics Engine                          │   │
-│   │    Descriptive Stats │ Correlation │ Covariance │ Regression │   │
+│   │    Descriptive Stats │ Correlation │ Covariance │ Regression│   │
 │   └────────────────────────────┬────────────────────────────────┘   │
 │                                │                                    │
 │   ┌────────────────────────────▼────────────────────────────────┐   │
