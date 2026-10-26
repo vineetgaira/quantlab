@@ -25,7 +25,7 @@ def test_methods_find_sqrt_two(method, args):
         root = method(f, lambda x: 2 * x, args[1], tol=1e-10)
     else:
         root = method(f, *args, tol=1e-10)
-    assert root == pytest.approx(math.sqrt(2), abs=1e-9)
+    assert root == pytest.approx(math.sqrt(2), rel=0, abs=1e-9)
 
 
 @pytest.mark.parametrize("method", [bisection_method, false_position_method])
