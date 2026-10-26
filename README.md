@@ -15,7 +15,7 @@
 
 QuantLab is designed for researchers, quants, and engineers who want a transparent, extensible toolkit — one where every algorithm is implemented from first principles, thoroughly tested, and clearly documented.
 
-> ⚠️ **This project is in early development.** Core infrastructure has been established. No numerical algorithms have been implemented yet.
+> ⚠️ **This project is in early development.** Core infrastructure and the initial root-finding algorithms have been implemented.
 
 ---
 
@@ -168,10 +168,10 @@ quantlab/
 > Foundational algorithms implemented from mathematical first principles.
 
 **Root Finding**
-- [ ] Bisection Method
-- [ ] Newton-Raphson Method
-- [ ] Secant Method
-- [ ] False Position Method (Regula Falsi)
+- [x] Bisection Method
+- [x] Newton-Raphson Method
+- [x] Secant Method
+- [x] False Position Method (Regula Falsi)
 
 **Numerical Integration**
 - [ ] Trapezoidal Rule
@@ -363,7 +363,7 @@ pytest --cov=quantlab --cov-report=term-missing
 ## Current Status
 
 ```
-🚧  EARLY DEVELOPMENT — Phase 0 in progress
+🚧  EARLY DEVELOPMENT — Phase 1 in progress
 ```
 
 | Item | Status |
@@ -373,9 +373,10 @@ pytest --cov=quantlab --cov-report=term-missing
 | Virtual environment | ✅ Complete |
 | Documentation setup | ✅ Complete |
 | Development standards | 🔄 In Progress |
-| Numerical Methods (Phase 1) | ⏳ Next |
+| Root Finding | ✅ Implemented with tests |
+| Numerical Methods (Phase 1) | 🔄 In Progress |
 
-**Current Objective:** Establish development standards and CI pipeline, then implement and test the Root Finding module (Phase 1 start).
+**Current Objective:** Continue Phase 1 by implementing and testing numerical integration methods.
 
 ---
 
