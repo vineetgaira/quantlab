@@ -1,3 +1,0 @@
-Todo right now:
-    Root finding algorithms
-    1. Bisection is the first one that is on the menu.

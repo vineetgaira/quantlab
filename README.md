@@ -174,9 +174,9 @@ quantlab/
 - [x] False Position Method (Regula Falsi)
 
 **Numerical Integration**
-- [ ] Trapezoidal Rule
-- [ ] Simpson's 1/3 Rule
-- [ ] Simpson's 3/8 Rule
+- [x] Trapezoidal Rule
+- [x] Simpson's 1/3 Rule
+- [x] Simpson's 3/8 Rule
 
 **Differential Equations**
 - [ ] Euler Method
@@ -376,7 +376,7 @@ pytest --cov=quantlab --cov-report=term-missing
 | Root Finding | ✅ Implemented with tests |
 | Numerical Methods (Phase 1) | 🔄 In Progress |
 
-**Current Objective:** Continue Phase 1 by implementing and testing numerical integration methods.
+**Current Objective:** Continue Phase 1 with differential equations and linear algebra methods.
 
 ---
 

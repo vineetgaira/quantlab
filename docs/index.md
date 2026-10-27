@@ -10,6 +10,10 @@ The package is available from `src.roots`.
 The root-finding module also includes false position, Newton–Raphson, and secant
 methods. Their public functions are exported by `src.roots`.
 
+## Numerical integration
+
+- [Numerical integration methods](numerical_integration.md)
+
 ## Running the tests
 
 From the repository root, run:
