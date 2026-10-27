@@ -27,3 +27,6 @@ Desktop.ini
 
 # Logs
 *.log
+
+# Ruff cache
+.ruff_cache
