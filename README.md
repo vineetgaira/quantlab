@@ -179,8 +179,8 @@ quantlab/
 - [x] Simpson's 3/8 Rule
 
 **Differential Equations**
-- [ ] Euler Method
-- [ ] Runge-Kutta 4th Order (RK4)
+- [x] Euler Method
+- [x] Runge-Kutta 4th Order (RK4)
 
 **Linear Algebra**
 - [ ] Gaussian Elimination
@@ -376,7 +376,7 @@ pytest --cov=quantlab --cov-report=term-missing
 | Root Finding | ✅ Implemented with tests |
 | Numerical Methods (Phase 1) | 🔄 In Progress |
 
-**Current Objective:** Continue Phase 1 with differential equations and linear algebra methods.
+**Current Objective:** Continue Phase 1 with linear algebra methods.
 
 ---
 

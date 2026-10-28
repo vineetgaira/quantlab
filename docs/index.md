@@ -14,6 +14,10 @@ methods. Their public functions are exported by `src.roots`.
 
 - [Numerical integration methods](numerical_integration.md)
 
+## Differential equations
+
+- [Ordinary differential equation solvers](differential_equations.md)
+
 ## Running the tests
 
 From the repository root, run:
