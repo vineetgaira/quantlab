@@ -7,7 +7,6 @@ from src.linear_algebra import (
     lu_decomposition,
 )
 
-
 MATRIX = [[4, 1], [2, 3]]
 VECTOR = [1, 2]
 

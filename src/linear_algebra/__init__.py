@@ -6,8 +6,8 @@ from .jacobi import jacobi_method
 from .lu_decomposition import lu_decomposition
 
 __all__ = [
-    "gaussian_elimination",
-    "lu_decomposition",
-    "jacobi_method",
     "gauss_seidel_method",
+    "gaussian_elimination",
+    "jacobi_method",
+    "lu_decomposition",
 ]
