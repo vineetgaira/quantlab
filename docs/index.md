@@ -18,6 +18,10 @@ methods. Their public functions are exported by `src.roots`.
 
 - [Ordinary differential equation solvers](differential_equations.md)
 
+## Linear algebra
+
+- [Linear system solvers and matrix factorization](linear_algebra.md)
+
 ## Running the tests
 
 From the repository root, run:

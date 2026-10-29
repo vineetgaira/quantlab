@@ -183,10 +183,10 @@ quantlab/
 - [x] Runge-Kutta 4th Order (RK4)
 
 **Linear Algebra**
-- [ ] Gaussian Elimination
-- [ ] LU Decomposition
-- [ ] Jacobi Iterative Method
-- [ ] Gauss-Seidel Method
+- [x] Gaussian Elimination
+- [x] LU Decomposition
+- [x] Jacobi Iterative Method
+- [x] Gauss-Seidel Method
 
 ---
 
@@ -374,6 +374,7 @@ pytest --cov=quantlab --cov-report=term-missing
 | Documentation setup | ✅ Complete |
 | Development standards | 🔄 In Progress |
 | Root Finding | ✅ Implemented with tests |
+| Linear Algebra | ✅ Implemented with tests |
 | Numerical Methods (Phase 1) | 🔄 In Progress |
 
 **Current Objective:** Continue Phase 1 with linear algebra methods.
