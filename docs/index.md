@@ -22,6 +22,10 @@ methods. Their public functions are exported by `src.roots`.
 
 - [Linear system solvers and matrix factorization](linear_algebra.md)
 
+## Statistics
+
+- [Descriptive and inferential statistics](statistics.md)
+
 ## Running the tests
 
 From the repository root, run:

@@ -194,11 +194,11 @@ quantlab/
 
 > Core statistical primitives for data analysis and inference.
 
-- [ ] Mean, Median, Mode
-- [ ] Variance and Standard Deviation
-- [ ] Covariance and Correlation
-- [ ] Simple Linear Regression
-- [ ] Hypothesis testing utilities
+- [x] Mean, Median, Mode
+- [x] Variance and Standard Deviation
+- [x] Covariance and Correlation
+- [x] Simple Linear Regression
+- [x] Hypothesis testing utilities
 
 ---
 
@@ -375,6 +375,7 @@ pytest --cov=quantlab --cov-report=term-missing
 | Development standards | 🔄 In Progress |
 | Root Finding | ✅ Implemented with tests |
 | Linear Algebra | ✅ Implemented with tests |
+| Statistics Engine | ✅ Implemented with tests |
 | Numerical Methods (Phase 1) | 🔄 In Progress |
 
 **Current Objective:** Continue Phase 1 with linear algebra methods.
