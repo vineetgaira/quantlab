@@ -4,7 +4,8 @@ import math
 from collections import Counter
 from collections.abc import Iterable
 
-from ._common import mean as _mean, sample
+from ._common import mean as _mean
+from ._common import sample
 
 
 def mean(values: Iterable[float]) -> float:

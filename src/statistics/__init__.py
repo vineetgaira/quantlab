@@ -6,7 +6,16 @@ from .hypothesis import TestResult, one_sample_t_test, welch_t_test
 from .regression import LinearRegressionResult, simple_linear_regression
 
 __all__ = [
-    "mean", "median", "mode", "variance", "standard_deviation",
-    "covariance", "correlation", "LinearRegressionResult",
-    "simple_linear_regression", "TestResult", "one_sample_t_test", "welch_t_test",
+    "LinearRegressionResult",
+    "TestResult",
+    "correlation",
+    "covariance",
+    "mean",
+    "median",
+    "mode",
+    "one_sample_t_test",
+    "simple_linear_regression",
+    "standard_deviation",
+    "variance",
+    "welch_t_test",
 ]
