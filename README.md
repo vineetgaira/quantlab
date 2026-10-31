@@ -230,9 +230,9 @@ quantlab/
 
 > Stochastic simulation for pricing and risk estimation.
 
-- [ ] Geometric Brownian Motion (GBM)
-- [ ] Multi-path Price Simulation
-- [ ] Distribution Analysis and Confidence Intervals
+- [x] Geometric Brownian Motion (GBM)
+- [x] Multi-path Price Simulation
+- [x] Distribution Analysis and Confidence Intervals
 
 ---
 
@@ -376,6 +376,7 @@ pytest --cov=quantlab --cov-report=term-missing
 | Root Finding | ✅ Implemented with tests |
 | Linear Algebra | ✅ Implemented with tests |
 | Statistics Engine | ✅ Implemented with tests |
+| Monte Carlo Simulation | ✅ Implemented with tests |
 | Numerical Methods (Phase 1) | 🔄 In Progress |
 
 **Current Objective:** Continue Phase 1 with linear algebra methods.

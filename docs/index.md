@@ -26,6 +26,10 @@ methods. Their public functions are exported by `src.roots`.
 
 - [Descriptive and inferential statistics](statistics.md)
 
+## Monte Carlo simulation
+
+- [Geometric Brownian motion and distribution analysis](simulation.md)
+
 ## Running the tests
 
 From the repository root, run:
