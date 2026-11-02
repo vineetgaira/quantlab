@@ -240,12 +240,12 @@ quantlab/
 
 > Derivative pricing models and Greeks computation.
 
-- [ ] Black-Scholes Model (Call & Put)
-- [ ] Delta
-- [ ] Gamma
-- [ ] Vega
-- [ ] Theta
-- [ ] Binomial Tree Pricing (CRR)
+- [x] Black-Scholes Model (Call & Put)
+- [x] Delta
+- [x] Gamma
+- [x] Vega
+- [x] Theta
+- [x] Binomial Tree Pricing (CRR)
 
 ---
 
@@ -377,6 +377,7 @@ pytest --cov=quantlab --cov-report=term-missing
 | Linear Algebra | ✅ Implemented with tests |
 | Statistics Engine | ✅ Implemented with tests |
 | Monte Carlo Simulation | ✅ Implemented with tests |
+| Option Pricing | ✅ Implemented with tests |
 | Numerical Methods (Phase 1) | 🔄 In Progress |
 
 **Current Objective:** Continue Phase 1 with linear algebra methods.

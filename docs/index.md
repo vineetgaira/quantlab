@@ -30,6 +30,10 @@ methods. Their public functions are exported by `src.roots`.
 
 - [Geometric Brownian motion and distribution analysis](simulation.md)
 
+## Option pricing
+
+- [Black-Scholes, Greeks, and CRR binomial pricing](option_pricing.md)
+
 ## Running the tests
 
 From the repository root, run:
