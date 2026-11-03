@@ -34,6 +34,10 @@ methods. Their public functions are exported by `src.roots`.
 
 - [Black-Scholes, Greeks, and CRR binomial pricing](option_pricing.md)
 
+## Portfolio optimization
+
+- [Mean-variance portfolio construction and analytics](portfolio_optimization.md)
+
 ## Running the tests
 
 From the repository root, run:
