@@ -38,6 +38,10 @@ methods. Their public functions are exported by `src.roots`.
 
 - [Mean-variance portfolio construction and analytics](portfolio_optimization.md)
 
+## Backtesting
+
+- [Strategy simulation and performance metrics](backtesting.md)
+
 ## Running the tests
 
 From the repository root, run:
