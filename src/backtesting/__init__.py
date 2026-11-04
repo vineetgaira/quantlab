@@ -5,6 +5,11 @@ from .metrics import PerformanceMetrics, performance_metrics
 from .strategy import Strategy
 
 __all__ = [
-    "Strategy", "BacktestResult", "Trade", "TradeEvent", "PerformanceMetrics",
-    "run_backtest", "performance_metrics",
+    "BacktestResult",
+    "PerformanceMetrics",
+    "Strategy",
+    "Trade",
+    "TradeEvent",
+    "performance_metrics",
+    "run_backtest",
 ]
