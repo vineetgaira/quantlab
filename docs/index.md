@@ -42,6 +42,10 @@ methods. Their public functions are exported by `src.roots`.
 
 - [Strategy simulation and performance metrics](backtesting.md)
 
+## Machine learning
+
+- [Time-series features, prediction, volatility, and regimes](machine_learning.md)
+
 ## Running the tests
 
 From the repository root, run:

@@ -90,56 +90,23 @@ The platform is designed to grow incrementally through well-defined phases, ensu
 
 ```
 quantlab/
-│
-├── quantlab/                    # Core library
-│   ├── __init__.py
-│   ├── numerical/               # Phase 1: Numerical methods
-│   │   ├── root_finding.py
-│   │   ├── integration.py
-│   │   ├── ode.py
-│   │   └── linear_algebra.py
-│   ├── statistics/              # Phase 2: Statistics engine
-│   │   ├── descriptive.py
-│   │   └── regression.py
-│   ├── data/                    # Phase 3: Financial data layer
-│   │   ├── loader.py
-│   │   ├── cleaning.py
-│   │   └── returns.py
-│   ├── risk/                    # Phase 4: Risk analytics
-│   │   └── metrics.py
-│   ├── simulation/              # Phase 5: Monte Carlo
-│   │   └── monte_carlo.py
-│   ├── pricing/                 # Phase 6: Option pricing
-│   │   ├── black_scholes.py
-│   │   └── binomial.py
-│   ├── portfolio/               # Phase 7: Portfolio optimization
-│   │   └── optimizer.py
-│   ├── backtest/                # Phase 8: Backtesting engine
-│   │   └── engine.py
-│   ├── ml/                      # Phase 9: Machine learning
-│   │   └── models.py
-│   └── viz/                     # Phase 10: Visualization
-│       └── dashboard.py
-│
-├── tests/                       # Unit and integration tests
-│   ├── test_numerical.py
-│   ├── test_statistics.py
-│   └── ...
-│
-├── notebooks/                   # Research notebooks
-│   └── exploration/
-│
-├── docs/                        # Documentation
-│   ├── index.md
-│   └── api/
-│
-├── data/                        # Sample datasets
-│
-├── .github/                     # GitHub Actions workflows
-│
+├── src/                         # Algorithm packages
+│   ├── roots/
+│   ├── numerical_integration/
+│   ├── differential_equations/
+│   ├── linear_algebra/
+│   ├── statistics/
+│   ├── simulation/
+│   ├── option_pricing/
+│   ├── portfolio_optimization/
+│   ├── backtesting/
+│   └── machine_learning/
+├── tests/                       # Pytest suite
+├── docs/                        # Guides and docs index
+├── data/
+├── notebooks/
 ├── pyproject.toml
 ├── requirements.txt
-├── .env.example
 └── README.md
 ```
 
@@ -276,11 +243,11 @@ quantlab/
 
 > Data-driven models for prediction and market regime analysis.
 
-- [ ] Feature Engineering Pipeline
-- [ ] Return Prediction Models
-- [ ] Volatility Forecasting (GARCH-inspired)
-- [ ] Market Regime Detection (HMM / clustering)
-- [ ] Model Evaluation and Cross-validation
+- [x] Feature Engineering Pipeline
+- [x] Return Prediction Models
+- [x] Volatility Forecasting (GARCH-inspired)
+- [x] Market Regime Detection (HMM / clustering)
+- [x] Model Evaluation and Cross-validation
 
 ---
 
@@ -340,7 +307,7 @@ python -m venv .venv
 source .venv/bin/activate        # Linux / macOS
 # .venv\Scripts\activate         # Windows
 
-# Install dependencies
+# Install test dependencies
 pip install -r requirements.txt
 ```
 
@@ -351,11 +318,8 @@ pip install -r requirements.txt
 ## Running Tests
 
 ```bash
-# Run the full test suite
-pytest
-
-# Run with coverage report
-pytest --cov=quantlab --cov-report=term-missing
+# Run the full test suite from the repository root
+python -m pytest
 ```
 
 ---
@@ -380,9 +344,10 @@ pytest --cov=quantlab --cov-report=term-missing
 | Option Pricing | ✅ Implemented with tests |
 | Portfolio Optimization | ✅ Implemented with tests |
 | Backtesting Engine | ✅ Implemented with tests |
+| Machine Learning | ✅ Implemented with tests |
 | Numerical Methods (Phase 1) | 🔄 In Progress |
 
-**Current Objective:** Continue Phase 1 with linear algebra methods.
+**Current Objective:** Continue Phase 10 with visualization tools.
 
 ---
 

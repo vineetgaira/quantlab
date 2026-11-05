@@ -17,6 +17,7 @@ __pycache__/
 # Build Files
 build/
 dist/
+*.egg-info/
 
 # OS Files
 Thumbs.db
