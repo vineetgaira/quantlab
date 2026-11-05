@@ -11,7 +11,14 @@ from .models import GarchVolatilityModel, LinearReturnModel
 from .regimes import RegimeResult, detect_regimes
 
 __all__ = [
-    "FeatureSet", "build_return_features", "LinearReturnModel",
-    "GarchVolatilityModel", "RegimeResult", "detect_regimes", "FoldMetrics",
-    "CrossValidationResult", "time_series_splits", "cross_validate_regressor",
+    "CrossValidationResult",
+    "FeatureSet",
+    "FoldMetrics",
+    "GarchVolatilityModel",
+    "LinearReturnModel",
+    "RegimeResult",
+    "build_return_features",
+    "cross_validate_regressor",
+    "detect_regimes",
+    "time_series_splits",
 ]

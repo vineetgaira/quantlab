@@ -1,7 +1,7 @@
 """Small dependency-free prediction and volatility models."""
 
 import math
-from collections.abc import Iterable, Sequence
+from collections.abc import Iterable
 from dataclasses import dataclass
 
 
