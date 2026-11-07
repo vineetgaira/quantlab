@@ -1,8 +1,8 @@
 """HTML and minimal vector PDF report generation."""
 
 import html
-from pathlib import Path
 from collections.abc import Iterable, Sequence
+from pathlib import Path
 
 from .dashboard import analyze_prices, build_dashboard_html
 
