@@ -100,7 +100,8 @@ quantlab/
 │   ├── option_pricing/
 │   ├── portfolio_optimization/
 │   ├── backtesting/
-│   └── machine_learning/
+│   ├── machine_learning/
+│   └── visualization/
 ├── tests/                       # Pytest suite
 ├── docs/                        # Guides and docs index
 ├── data/
@@ -255,10 +256,10 @@ quantlab/
 
 > Interactive visualization and reporting layer.
 
-- [ ] Interactive Price and Returns Charts (Plotly)
-- [ ] Analytics Dashboard Layout
-- [ ] Streamlit Application
-- [ ] Automated Report Generation (PDF / HTML)
+- [x] Interactive Price and Returns Charts (Plotly)
+- [x] Analytics Dashboard Layout
+- [x] Streamlit Application
+- [x] Automated Report Generation (PDF / HTML)
 
 ---
 
@@ -273,9 +274,9 @@ quantlab/
 | **SymPy** | Symbolic mathematics | 🔲 Planned |
 | **SciPy** | Scientific computing reference | 🔲 Planned |
 | **Scikit-Learn** | Machine learning models | 🔲 Planned |
-| **Plotly** | Interactive visualizations | 🔲 Planned |
-| **Streamlit** | Analytics web application | 🔲 Planned |
-| **PyTest** | Testing framework | 🔲 Planned |
+| **Plotly.js** | Interactive visualizations | ✅ Implemented |
+| **Streamlit** | Optional analytics web application | ✅ Implemented |
+| **PyTest** | Testing framework | ✅ Configured |
 
 ---
 
@@ -311,7 +312,7 @@ source .venv/bin/activate        # Linux / macOS
 pip install -r requirements.txt
 ```
 
-> Full usage documentation will be added as modules are implemented.
+> See the [documentation index](docs/index.md) for module guides and examples.
 
 ---
 
@@ -327,7 +328,7 @@ python -m pytest
 ## Current Status
 
 ```
-🚧  EARLY DEVELOPMENT — Phase 1 in progress
+🚧  EARLY DEVELOPMENT — Phase 0 work and Phases 3–4 remain on the roadmap
 ```
 
 | Item | Status |
@@ -345,9 +346,10 @@ python -m pytest
 | Portfolio Optimization | ✅ Implemented with tests |
 | Backtesting Engine | ✅ Implemented with tests |
 | Machine Learning | ✅ Implemented with tests |
-| Numerical Methods (Phase 1) | 🔄 In Progress |
+| Visualization Dashboard | ✅ Implemented with tests |
+| Numerical Methods (Phase 1) | ✅ Implemented |
 
-**Current Objective:** Continue Phase 10 with visualization tools.
+**Current Objective:** Continue with Phase 3 — Financial Data Layer.
 
 ---
 

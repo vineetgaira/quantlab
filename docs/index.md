@@ -1,7 +1,8 @@
 # QuantLab documentation
 
-QuantLab currently provides scalar root-finding methods implemented in Python.
-The package is available from `src.roots`.
+QuantLab provides numerical methods, statistics, simulation, pricing,
+optimization, backtesting, machine learning, and visualization tools. Packages
+are organized under `src` and documented below.
 
 ## Root finding
 
@@ -45,6 +46,10 @@ methods. Their public functions are exported by `src.roots`.
 ## Machine learning
 
 - [Time-series features, prediction, volatility, and regimes](machine_learning.md)
+
+## Visualization and reporting
+
+- [Interactive dashboard and HTML/PDF reports](visualization.md)
 
 ## Running the tests
 
