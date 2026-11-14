@@ -1,400 +1,232 @@
 # QuantLab
 
-> A modular quantitative research and analytics platform built in Python — from first principles.
+> A Python toolkit for quantitative research, numerical methods, portfolio analysis, and visualization.
 
 [![Python](https://img.shields.io/badge/Python-3.11%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![Status](https://img.shields.io/badge/Status-Early%20Development-orange)]()
+[![Status](https://img.shields.io/badge/Status-Active%20Development-orange)]()
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
-[![Docs](https://img.shields.io/badge/Docs-In%20Progress-lightgrey)]()
+[![Docs](https://img.shields.io/badge/Docs-Available-brightgreen)](docs/index.md)
 
 ---
 
 ## Overview
 
-**QuantLab** is a long-term quantitative research and analytics platform built entirely in Python. The project integrates numerical analysis, statistical modeling, quantitative finance, machine learning, and scientific computing into a single cohesive and modular framework.
-QuantLab is designed for researchers, quants, and engineers who want a transparent, extensible toolkit — one where every algorithm is implemented from first principles, thoroughly tested, and clearly documented.
+QuantLab is a modular Python project for quantitative research. The repository
+currently contains tested implementations for numerical methods, statistics,
+simulation, option pricing, portfolio optimization, backtesting, machine
+learning utilities, and visualization. A financial data layer and a dedicated
+risk analytics package remain on the roadmap.
 
-> ⚠️ **This project is in early development.** Core infrastructure and the initial root-finding algorithms have been implemented.
-
----
-
-## Vision
-
-The long-term goal of QuantLab is to build a **production-grade quantitative research platform from first principles** — without hiding complexity behind black-box libraries.
-
-Rather than wrapping existing tools, QuantLab implements each algorithm from the mathematical ground up: root-finding methods, numerical integrators, statistical estimators, financial risk models, Monte Carlo engines, option pricing frameworks, and portfolio optimizers. Every component is independently testable, composable with others, and grounded in rigorous quantitative theory.
-
-The platform is designed to grow incrementally through well-defined phases, ensuring that each layer of functionality is solid before the next is built on top of it.
+The project is in active development. See the [documentation index](docs/index.md)
+for guides and examples for the implemented modules.
 
 ---
 
-## Architecture
+## Implemented modules
 
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                          QuantLab Platform                          │
-├─────────────────────────────────────────────────────────────────────┤
-│                                                                     │
-│   ┌─────────────────────────────────────────────────────────────┐   │
-│   │                   Visualization Layer                       │   │
-│   │         Streamlit Dashboard │ Plotly Charts │ Reports       │   │
-│   └────────────────────────────┬────────────────────────────────┘   │
-│                                │                                    │
-│   ┌────────────────────────────▼────────────────────────────────┐   │
-│   │               Machine Learning Engine                       │   │
-│   │    Feature Engineering │ Return Prediction │ Regime Detect  │   │
-│   └────────────────────────┬────────────────────────────────────┘   │
-│                            │                                        │
-│   ┌────────────────────────▼────────────────────────────────────┐   │
-│   │                  Backtesting Engine                         │   │
-│   │      Strategy Framework │ Performance Metrics │ Trade Log   │   │
-│   └───────────────┬─────────────────────────┬───────────────────┘   │
-│                   │                         │                       │
-│   ┌───────────────▼───────────┐  ┌──────────▼──────────────────┐    │
-│   │   Portfolio Optimization  │  │      Option Pricing         │    │
-│   │  Efficient Frontier │ MVP │  │  Black-Scholes │ Binomial   │    │
-│   └───────────────┬───────────┘  └──────────┬──────────────────┘    │
-│                   │                         │                       │
-│   ┌───────────────▼─────────────────────────▼───────────────────┐   │
-│   │                    Risk Analytics                           │   │
-│   │    Volatility │ Sharpe │ Sortino │ Max Drawdown │ VaR       │   │
-│   └────────────────────────────┬────────────────────────────────┘   │
-│                                │                                    │
-│   ┌────────────────────────────▼────────────────────────────────┐   │
-│   │                Monte Carlo Simulation                       │   │
-│   │         GBM │ Price Path Simulation │ Distributions         │   │
-│   └────────────────────────────┬────────────────────────────────┘   │
-│                                │                                    │
-│   ┌────────────────────────────▼────────────────────────────────┐   │
-│   │                 Financial Data Layer                        │   │
-│   │       Market Data Loader │ Returns │ Log Returns │ Drawdown │   │
-│   └────────────────────────────┬────────────────────────────────┘   │
-│                                │                                    │
-│   ┌────────────────────────────▼────────────────────────────────┐   │
-│   │                  Statistics Engine                          │   │
-│   │    Descriptive Stats │ Correlation │ Covariance │ Regression│   │
-│   └────────────────────────────┬────────────────────────────────┘   │
-│                                │                                    │
-│   ┌────────────────────────────▼────────────────────────────────┐   │
-│   │                  Numerical Methods Core                     │   │
-│   │  Root Finding │ Integration │ ODE Solvers │ Linear Algebra  │   │
-│   └─────────────────────────────────────────────────────────────┘   │
-│                                                                     │
-└─────────────────────────────────────────────────────────────────────┘
-```
+| Module | Current capabilities |
+|---|---|
+| `src.roots` | Bisection, Newton–Raphson, secant, and false-position root finding |
+| `src.numerical_integration` | Composite trapezoidal, Simpson's 1/3, and Simpson's 3/8 rules |
+| `src.differential_equations` | Euler and classical fourth-order Runge–Kutta initial-value solvers |
+| `src.linear_algebra` | Gaussian elimination, LU decomposition, Jacobi, and Gauss–Seidel methods |
+| `src.statistics` | Descriptive statistics, covariance, correlation, regression, and t-tests |
+| `src.simulation` | Geometric Brownian motion paths and distribution summaries |
+| `src.option_pricing` | Black–Scholes prices and Greeks, plus CRR binomial pricing |
+| `src.portfolio_optimization` | Covariance, mean-variance optimization, efficient frontier, and portfolio metrics |
+| `src.backtesting` | Strategy interface, backtest engine, trades, and performance metrics |
+| `src.machine_learning` | Return features/models, volatility model, regime detection, and time-series evaluation |
+| `src.visualization` | Price analytics, interactive charts, Streamlit dashboard, and HTML/PDF reports |
+
+The Python algorithms use the standard library. The optional dashboard uses
+Streamlit, and its interactive browser charts load Plotly.js from a CDN.
 
 ---
 
-## Project Structure
+## Project structure
 
-```
+```text
 quantlab/
-│
-├── quantlab/                    # Core library
-│   ├── __init__.py
-│   ├── numerical/               # Phase 1: Numerical methods
-│   │   ├── root_finding.py
-│   │   ├── integration.py
-│   │   ├── ode.py
-│   │   └── linear_algebra.py
-│   ├── statistics/              # Phase 2: Statistics engine
-│   │   ├── descriptive.py
-│   │   └── regression.py
-│   ├── data/                    # Phase 3: Financial data layer
-│   │   ├── loader.py
-│   │   ├── cleaning.py
-│   │   └── returns.py
-│   ├── risk/                    # Phase 4: Risk analytics
-│   │   └── metrics.py
-│   ├── simulation/              # Phase 5: Monte Carlo
-│   │   └── monte_carlo.py
-│   ├── pricing/                 # Phase 6: Option pricing
-│   │   ├── black_scholes.py
-│   │   └── binomial.py
-│   ├── portfolio/               # Phase 7: Portfolio optimization
-│   │   └── optimizer.py
-│   ├── backtest/                # Phase 8: Backtesting engine
-│   │   └── engine.py
-│   ├── ml/                      # Phase 9: Machine learning
-│   │   └── models.py
-│   └── viz/                     # Phase 10: Visualization
-│       └── dashboard.py
-│
-├── tests/                       # Unit and integration tests
-│   ├── test_numerical.py
-│   ├── test_statistics.py
-│   └── ...
-│
-├── notebooks/                   # Research notebooks
-│   └── exploration/
-│
-├── docs/                        # Documentation
-│   ├── index.md
-│   └── api/
-│
-├── data/                        # Sample datasets
-│
-├── .github/                     # GitHub Actions workflows
-│
-├── pyproject.toml
-├── requirements.txt
-├── .env.example
+├── src/
+│   ├── roots/                       # Scalar root-finding methods
+│   ├── numerical_integration/       # Composite quadrature rules
+│   ├── differential_equations/      # Scalar initial-value ODE solvers
+│   ├── linear_algebra/              # Direct and iterative solvers
+│   ├── statistics/                  # Descriptive and inferential statistics
+│   ├── simulation/                  # GBM simulation and distribution analysis
+│   ├── option_pricing/              # Black–Scholes and binomial pricing
+│   ├── portfolio_optimization/      # Mean-variance tools and analytics
+│   ├── backtesting/                 # Strategy backtesting and metrics
+│   ├── machine_learning/             # Features, models, regimes, evaluation
+│   └── visualization/               # Dashboard, CSV input, HTML/PDF reports
+├── tests/                            # Pytest module tests
+├── docs/                             # Module guides
+├── app.py                            # Small project entry point
+├── pyproject.toml                    # Package metadata and pytest configuration
+├── requirements.txt                  # Test dependency
+├── LICENSE
 └── README.md
 ```
 
----
-
-## Development Roadmap
-
-### Phase 0 — Project Foundation
-
-> Infrastructure and development environment.
-
-- [x] Repository setup and version control
-- [x] GitHub integration and branching strategy
-- [x] Project directory structure
-- [x] Python virtual environment configuration
-- [x] README and documentation setup
-- [ ] Development standards and contribution guidelines
-- [ ] Pre-commit hooks and linting (Black, Ruff, isort)
-- [ ] CI/CD pipeline with GitHub Actions
-- [ ] PyTest configuration and test scaffolding
+Modules are imported from the `src` namespace, for example `from src.roots
+import bisection_method`.
 
 ---
 
-### Phase 1 — Numerical Methods
+## Development roadmap
 
-> Foundational algorithms implemented from mathematical first principles.
+### Phase 0 — Project foundation
 
-**Root Finding**
-- [x] Bisection Method
-- [x] Newton-Raphson Method
-- [x] Secant Method
-- [x] False Position Method (Regula Falsi)
+- [x] Repository and project structure
+- [x] Python package metadata and test configuration
+- [x] Documentation setup
+- [ ] Contribution and development standards
+- [ ] Linting and pre-commit hooks
+- [ ] Continuous integration workflow
 
-**Numerical Integration**
-- [x] Trapezoidal Rule
-- [x] Simpson's 1/3 Rule
-- [x] Simpson's 3/8 Rule
+### Phase 1 — Numerical methods
 
-**Differential Equations**
-- [x] Euler Method
-- [x] Runge-Kutta 4th Order (RK4)
+- [x] Bisection, Newton–Raphson, secant, and false-position methods
+- [x] Trapezoidal rule and Simpson's 1/3 and 3/8 rules
+- [x] Euler and fourth-order Runge–Kutta methods
+- [x] Gaussian elimination and LU decomposition
+- [x] Jacobi and Gauss–Seidel iterative methods
 
-**Linear Algebra**
-- [x] Gaussian Elimination
-- [x] LU Decomposition
-- [x] Jacobi Iterative Method
-- [x] Gauss-Seidel Method
+### Phase 2 — Statistics engine
 
----
+- [x] Mean, median, mode, variance, and standard deviation
+- [x] Covariance and correlation
+- [x] Simple linear regression
+- [x] One-sample and Welch two-sample t-tests
 
-### Phase 2 — Statistics Engine
+### Phase 3 — Financial data layer
 
-> Core statistical primitives for data analysis and inference.
+- [ ] Market data loader for CSV and APIs
+- [ ] Data cleaning pipeline
+- [ ] Arithmetic and log returns
+- [ ] Drawdown analysis module
 
-- [x] Mean, Median, Mode
-- [x] Variance and Standard Deviation
-- [x] Covariance and Correlation
-- [x] Simple Linear Regression
-- [x] Hypothesis testing utilities
+### Phase 4 — Risk analytics
 
----
+- [ ] Historical and realized volatility
+- [ ] Sharpe and Sortino ratios
+- [ ] Maximum drawdown module
+- [ ] Historical and parametric value at risk
 
-### Phase 3 — Financial Data Layer
+### Phase 5 — Monte Carlo simulation
 
-> Market data ingestion, cleaning, and return computation.
+- [x] Geometric Brownian motion
+- [x] Multi-path simulation
+- [x] Distribution summaries and confidence intervals
 
-- [ ] Market Data Loader (CSV / API)
-- [ ] Data Cleaning Pipeline
-- [ ] Arithmetic Return Calculations
-- [ ] Log Return Calculations
-- [ ] Drawdown Analysis
+### Phase 6 — Option pricing
 
----
+- [x] Black–Scholes call and put pricing
+- [x] Delta, gamma, vega, and theta
+- [x] Cox–Ross–Rubinstein binomial pricing
 
-### Phase 4 — Risk Analytics
+### Phase 7 — Portfolio optimization
 
-> Quantitative risk metrics for financial instruments and portfolios.
+- [x] Asset covariance matrix
+- [x] Efficient frontier
+- [x] Minimum-variance and maximum-Sharpe portfolios
+- [x] Portfolio performance analytics
 
-- [ ] Historical and Realized Volatility
-- [ ] Sharpe Ratio
-- [ ] Sortino Ratio
-- [ ] Maximum Drawdown
-- [ ] Value at Risk (VaR) — Historical and Parametric
+### Phase 8 — Backtesting engine
 
----
+- [x] Strategy base interface and backtest engine
+- [x] CAGR, Sharpe, Calmar, volatility, and drawdown metrics
+- [x] Trade events, trade log, and trade-level analytics
 
-### Phase 5 — Monte Carlo Simulation
+### Phase 9 — Machine learning
 
-> Stochastic simulation for pricing and risk estimation.
+- [x] Return feature engineering
+- [x] Return prediction model
+- [x] GARCH-inspired volatility model
+- [x] Market regime detection
+- [x] Time-series cross-validation and evaluation
 
-- [x] Geometric Brownian Motion (GBM)
-- [x] Multi-path Price Simulation
-- [x] Distribution Analysis and Confidence Intervals
+### Phase 10 — Visualization dashboard
 
----
-
-### Phase 6 — Option Pricing
-
-> Derivative pricing models and Greeks computation.
-
-- [x] Black-Scholes Model (Call & Put)
-- [x] Delta
-- [x] Gamma
-- [x] Vega
-- [x] Theta
-- [x] Binomial Tree Pricing (CRR)
+- [x] Interactive price and return charts
+- [x] Analytics dashboard layout
+- [x] Streamlit application with CSV upload
+- [x] HTML and PDF report generation
 
 ---
 
-### Phase 7 — Portfolio Optimization
+## Technology and dependencies
 
-> Modern Portfolio Theory (MPT) and efficient frontier construction.
-
-- [ ] Asset Covariance Matrix
-- [ ] Efficient Frontier Generation
-- [ ] Minimum Variance Portfolio
-- [ ] Maximum Sharpe Portfolio
-- [ ] Portfolio Performance Analytics
-
----
-
-### Phase 8 — Backtesting Engine
-
-> Event-driven strategy simulation and performance evaluation.
-
-- [ ] Strategy Base Framework
-- [ ] Performance Metrics (CAGR, Sharpe, Calmar)
-- [ ] Risk Metrics (Max Drawdown, Volatility)
-- [ ] Trade-level Analytics and Logging
-
----
-
-### Phase 9 — Machine Learning
-
-> Data-driven models for prediction and market regime analysis.
-
-- [ ] Feature Engineering Pipeline
-- [ ] Return Prediction Models
-- [ ] Volatility Forecasting (GARCH-inspired)
-- [ ] Market Regime Detection (HMM / clustering)
-- [ ] Model Evaluation and Cross-validation
-
----
-
-### Phase 10 — Visualization Dashboard
-
-> Interactive visualization and reporting layer.
-
-- [ ] Interactive Price and Returns Charts (Plotly)
-- [ ] Analytics Dashboard Layout
-- [ ] Streamlit Application
-- [ ] Automated Report Generation (PDF / HTML)
-
----
-
-## Technology Stack
-
-| Technology | Role | Status |
+| Technology | Use | Status |
 |---|---|---|
-| ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white) **Python 3.11+** | Core language | ✅ Configured |
-| **NumPy** | Array computation, linear algebra | 🔲 Planned |
-| **Pandas** | Time series and data manipulation | 🔲 Planned |
-| **Matplotlib** | Static charting and plots | 🔲 Planned |
-| **SymPy** | Symbolic mathematics | 🔲 Planned |
-| **SciPy** | Scientific computing reference | 🔲 Planned |
-| **Scikit-Learn** | Machine learning models | 🔲 Planned |
-| **Plotly** | Interactive visualizations | 🔲 Planned |
-| **Streamlit** | Analytics web application | 🔲 Planned |
-| **PyTest** | Testing framework | 🔲 Planned |
+| Python 3.11+ | Core language | Required |
+| Python standard library | Core algorithms, analytics, and reports | Required |
+| Pytest | Test suite | Development requirement (`requirements.txt`) |
+| Streamlit | Optional dashboard interface | Install with the `dashboard` extra |
+| Plotly.js | Interactive charts in browser | Loaded from CDN by the dashboard |
+
+NumPy, Pandas, Matplotlib, SciPy, SymPy, and Scikit-learn are not current
+runtime dependencies.
 
 ---
 
-## Development Philosophy
-
-### First Principles Implementation
-Every algorithm in QuantLab is implemented from mathematical foundations — not wrapped from existing libraries. This ensures the codebase is a genuine learning and research tool, not a facade over black boxes.
-
-### Test Before You Expand
-No phase advances until the current one has complete unit test coverage. Each numerical method, statistical function, and financial model is verified against known inputs, edge cases, and reference implementations.
-
-### Reusable, Composable Components
-Modules are designed to be independent and composable. The statistics engine does not depend on the financial data layer; the risk analytics module does not depend on the ML engine. Dependencies flow strictly downward through the architecture.
-
-### Quantitative Research Focus
-QuantLab prioritizes correctness and transparency over performance optimization. The primary audience is researchers and quantitative analysts who need to understand, modify, and trust the underlying mathematics.
-
----
-
-## Getting Started
+## Getting started
 
 ```bash
-# Clone the repository
 git clone https://github.com/yourusername/quantlab.git
 cd quantlab
-
-# Create and activate virtual environment
 python -m venv .venv
 source .venv/bin/activate        # Linux / macOS
-# .venv\Scripts\activate         # Windows
-
-# Install dependencies
-pip install -r requirements.txt
+# .venv\Scripts\activate         # Windows PowerShell
+python -m pip install -e .
+python -m pip install -r requirements.txt
 ```
 
-> Full usage documentation will be added as modules are implemented.
-
----
-
-## Running Tests
+To install and launch the optional visualization app:
 
 ```bash
-# Run the full test suite
-pytest
+python -m pip install -e '.[dashboard]'
+streamlit run src/visualization/streamlit_app.py
+```
 
-# Run with coverage report
-pytest --cov=quantlab --cov-report=term-missing
+The dashboard accepts a CSV containing a `price`, `close`, `adj close`, or
+`adj_close` column. A `date`, `timestamp`, or `datetime` column can provide
+chart labels.
+
+---
+
+## Running tests
+
+From the repository root:
+
+```bash
+python -m pytest
 ```
 
 ---
 
-## Current Status
+## Current status
 
-```
-🚧  EARLY DEVELOPMENT — Phase 1 in progress
-```
+**Implemented:** Phases 1, 2, and 5–10 have source modules, documentation, and
+tests. Phase 0 has package metadata and pytest configuration; contribution
+standards, linting, and CI remain open. Phases 3 and 4 have not been implemented
+as dedicated modules yet.
 
-| Item | Status |
-|---|---|
-| Repository & GitHub setup | ✅ Complete |
-| Project structure | ✅ Complete |
-| Virtual environment | ✅ Complete |
-| Documentation setup | ✅ Complete |
-| Development standards | 🔄 In Progress |
-| Root Finding | ✅ Implemented with tests |
-| Linear Algebra | ✅ Implemented with tests |
-| Statistics Engine | ✅ Implemented with tests |
-| Monte Carlo Simulation | ✅ Implemented with tests |
-| Option Pricing | ✅ Implemented with tests |
-| Numerical Methods (Phase 1) | 🔄 In Progress |
-
-**Current Objective:** Continue Phase 1 with linear algebra methods.
+**Current focus:** Build the financial data layer (Phase 3), then risk analytics
+(Phase 4).
 
 ---
+
+## Documentation
+
+Start at the [documentation index](docs/index.md) for module guides, API usage,
+and examples.
 
 ## Contributing
 
-QuantLab is a personal research project in its early stages. Contribution guidelines will be published once the project foundation (Phase 0) is fully complete.
-
----
+QuantLab is an early-stage research project. Contribution and development
+guidelines have not been established yet.
 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
----
-
-<div align="center">
-  <sub>Built with rigor, curiosity, and a lot of math.</sub>
-</div>
