@@ -12,7 +12,6 @@
 ## Overview
 
 **QuantLab** is a long-term quantitative research and analytics platform built entirely in Python. The project integrates numerical analysis, statistical modeling, quantitative finance, machine learning, and scientific computing into a single cohesive and modular framework.
-
 QuantLab is designed for researchers, quants, and engineers who want a transparent, extensible toolkit — one where every algorithm is implemented from first principles, thoroughly tested, and clearly documented.
 
 > ⚠️ **This project is in early development.** Core infrastructure and the initial root-finding algorithms have been implemented.
@@ -90,24 +89,56 @@ The platform is designed to grow incrementally through well-defined phases, ensu
 
 ```
 quantlab/
-├── src/                         # Algorithm packages
-│   ├── roots/
-│   ├── numerical_integration/
-│   ├── differential_equations/
-│   ├── linear_algebra/
-│   ├── statistics/
-│   ├── simulation/
-│   ├── option_pricing/
-│   ├── portfolio_optimization/
-│   ├── backtesting/
-│   ├── machine_learning/
-│   └── visualization/
-├── tests/                       # Pytest suite
-├── docs/                        # Guides and docs index
-├── data/
-├── notebooks/
+│
+├── quantlab/                    # Core library
+│   ├── __init__.py
+│   ├── numerical/               # Phase 1: Numerical methods
+│   │   ├── root_finding.py
+│   │   ├── integration.py
+│   │   ├── ode.py
+│   │   └── linear_algebra.py
+│   ├── statistics/              # Phase 2: Statistics engine
+│   │   ├── descriptive.py
+│   │   └── regression.py
+│   ├── data/                    # Phase 3: Financial data layer
+│   │   ├── loader.py
+│   │   ├── cleaning.py
+│   │   └── returns.py
+│   ├── risk/                    # Phase 4: Risk analytics
+│   │   └── metrics.py
+│   ├── simulation/              # Phase 5: Monte Carlo
+│   │   └── monte_carlo.py
+│   ├── pricing/                 # Phase 6: Option pricing
+│   │   ├── black_scholes.py
+│   │   └── binomial.py
+│   ├── portfolio/               # Phase 7: Portfolio optimization
+│   │   └── optimizer.py
+│   ├── backtest/                # Phase 8: Backtesting engine
+│   │   └── engine.py
+│   ├── ml/                      # Phase 9: Machine learning
+│   │   └── models.py
+│   └── viz/                     # Phase 10: Visualization
+│       └── dashboard.py
+│
+├── tests/                       # Unit and integration tests
+│   ├── test_numerical.py
+│   ├── test_statistics.py
+│   └── ...
+│
+├── notebooks/                   # Research notebooks
+│   └── exploration/
+│
+├── docs/                        # Documentation
+│   ├── index.md
+│   └── api/
+│
+├── data/                        # Sample datasets
+│
+├── .github/                     # GitHub Actions workflows
+│
 ├── pyproject.toml
 ├── requirements.txt
+├── .env.example
 └── README.md
 ```
 
@@ -221,11 +252,11 @@ quantlab/
 
 > Modern Portfolio Theory (MPT) and efficient frontier construction.
 
-- [x] Asset Covariance Matrix
-- [x] Efficient Frontier Generation
-- [x] Minimum Variance Portfolio
-- [x] Maximum Sharpe Portfolio
-- [x] Portfolio Performance Analytics
+- [ ] Asset Covariance Matrix
+- [ ] Efficient Frontier Generation
+- [ ] Minimum Variance Portfolio
+- [ ] Maximum Sharpe Portfolio
+- [ ] Portfolio Performance Analytics
 
 ---
 
@@ -233,10 +264,10 @@ quantlab/
 
 > Event-driven strategy simulation and performance evaluation.
 
-- [x] Strategy Base Framework
-- [x] Performance Metrics (CAGR, Sharpe, Calmar)
-- [x] Risk Metrics (Max Drawdown, Volatility)
-- [x] Trade-level Analytics and Logging
+- [ ] Strategy Base Framework
+- [ ] Performance Metrics (CAGR, Sharpe, Calmar)
+- [ ] Risk Metrics (Max Drawdown, Volatility)
+- [ ] Trade-level Analytics and Logging
 
 ---
 
@@ -244,11 +275,11 @@ quantlab/
 
 > Data-driven models for prediction and market regime analysis.
 
-- [x] Feature Engineering Pipeline
-- [x] Return Prediction Models
-- [x] Volatility Forecasting (GARCH-inspired)
-- [x] Market Regime Detection (HMM / clustering)
-- [x] Model Evaluation and Cross-validation
+- [ ] Feature Engineering Pipeline
+- [ ] Return Prediction Models
+- [ ] Volatility Forecasting (GARCH-inspired)
+- [ ] Market Regime Detection (HMM / clustering)
+- [ ] Model Evaluation and Cross-validation
 
 ---
 
@@ -256,10 +287,10 @@ quantlab/
 
 > Interactive visualization and reporting layer.
 
-- [x] Interactive Price and Returns Charts (Plotly)
-- [x] Analytics Dashboard Layout
-- [x] Streamlit Application
-- [x] Automated Report Generation (PDF / HTML)
+- [ ] Interactive Price and Returns Charts (Plotly)
+- [ ] Analytics Dashboard Layout
+- [ ] Streamlit Application
+- [ ] Automated Report Generation (PDF / HTML)
 
 ---
 
@@ -274,9 +305,9 @@ quantlab/
 | **SymPy** | Symbolic mathematics | 🔲 Planned |
 | **SciPy** | Scientific computing reference | 🔲 Planned |
 | **Scikit-Learn** | Machine learning models | 🔲 Planned |
-| **Plotly.js** | Interactive visualizations | ✅ Implemented |
-| **Streamlit** | Optional analytics web application | ✅ Implemented |
-| **PyTest** | Testing framework | ✅ Configured |
+| **Plotly** | Interactive visualizations | 🔲 Planned |
+| **Streamlit** | Analytics web application | 🔲 Planned |
+| **PyTest** | Testing framework | 🔲 Planned |
 
 ---
 
@@ -308,19 +339,22 @@ python -m venv .venv
 source .venv/bin/activate        # Linux / macOS
 # .venv\Scripts\activate         # Windows
 
-# Install test dependencies
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-> See the [documentation index](docs/index.md) for module guides and examples.
+> Full usage documentation will be added as modules are implemented.
 
 ---
 
 ## Running Tests
 
 ```bash
-# Run the full test suite from the repository root
-python -m pytest
+# Run the full test suite
+pytest
+
+# Run with coverage report
+pytest --cov=quantlab --cov-report=term-missing
 ```
 
 ---
@@ -328,7 +362,7 @@ python -m pytest
 ## Current Status
 
 ```
-🚧  EARLY DEVELOPMENT — Phase 0 work and Phases 3–4 remain on the roadmap
+🚧  EARLY DEVELOPMENT — Phase 1 in progress
 ```
 
 | Item | Status |
@@ -343,13 +377,9 @@ python -m pytest
 | Statistics Engine | ✅ Implemented with tests |
 | Monte Carlo Simulation | ✅ Implemented with tests |
 | Option Pricing | ✅ Implemented with tests |
-| Portfolio Optimization | ✅ Implemented with tests |
-| Backtesting Engine | ✅ Implemented with tests |
-| Machine Learning | ✅ Implemented with tests |
-| Visualization Dashboard | ✅ Implemented with tests |
-| Numerical Methods (Phase 1) | ✅ Implemented |
+| Numerical Methods (Phase 1) | 🔄 In Progress |
 
-**Current Objective:** Continue with Phase 3 — Financial Data Layer.
+**Current Objective:** Continue Phase 1 with linear algebra methods.
 
 ---
 
